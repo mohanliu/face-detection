@@ -5,7 +5,7 @@ const stopbut = document.getElementById('stopbutton');
 let currentStream;
 let predictedAges = [];
 
-const MODEL_URL = './static'
+const MODEL_URL = '/static'
 
 function interpolateAgePredictions(age) {
   predictedAges = [age].concat(predictedAges).slice(0, 30)
@@ -59,11 +59,11 @@ button.addEventListener('click', event => {
 //       faceapi.loadSsdMobilenetv1Model(MODEL_URL),
 //       faceapi.loadFaceLandmarkModel(MODEL_URL),
 //       faceapi.loadFaceRecognitionModel(MODEL_URL)
-      faceapi.nets.tinyFaceDetector.loadFromDisk(MODEL_URL),
-      faceapi.nets.faceLandmark68Net.loadFromDisk(MODEL_URL),
-      faceapi.nets.faceRecognitionNet.loadFromDisk(MODEL_URL),
-      faceapi.nets.faceExpressionNet.loadFromDisk(MODEL_URL),
-      faceapi.nets.ageGenderNet.loadFromDisk(MODEL_URL)
+      faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
+      faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
+      faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
+      faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
+      faceapi.nets.ageGenderNet.loadFromUri(MODEL_URL)
   ]).then(function startvideo() {
       navigator.mediaDevices
         .getUserMedia(constraints)
