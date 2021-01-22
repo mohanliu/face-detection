@@ -60,7 +60,7 @@ button.addEventListener('click', event => {
       faceapi.loadFaceLandmarkTinyModel(MODEL_URL),
       faceapi.loadFaceRecognitionModel(MODEL_URL),
       faceapi.loadFaceExpressionModel(MODEL_URL),
-      faceapi.loadTinyYolov2Model(MODEL_URL)
+//       faceapi.loadTinyYolov2Model(MODEL_URL)
 //       faceapi.loadSsdMobilenetv1Model(MODEL_URL),
       
 //       faceapi.loadFaceLandmarkModel(MODEL_URL),
