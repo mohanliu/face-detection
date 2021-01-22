@@ -56,7 +56,7 @@ button.addEventListener('click', event => {
   };
 
   Promise.all([
-      faceapi.loadFaceDetectorModel(MODEL_URL),
+      faceapi.loadSsdMobilenetv1Model(MODEL_URL),
       faceapi.loadFaceLandmarkTinyModel(MODEL_URL),
       faceapi.loadFaceRecognitionModel(MODEL_URL),
       faceapi.loadFaceExpressionModel(MODEL_URL),
