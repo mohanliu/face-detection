@@ -5,7 +5,7 @@ const stopbut = document.getElementById('stopbutton');
 let currentStream;
 let predictedAges = [];
 
-const MODEL_URL = './models'
+const MODEL_URL = './static'
 
 function interpolateAgePredictions(age) {
   predictedAges = [age].concat(predictedAges).slice(0, 30)
