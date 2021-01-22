@@ -56,14 +56,14 @@ button.addEventListener('click', event => {
   };
 
   Promise.all([
-      faceapi.loadSsdMobilenetv1Model(MODEL_URL),
-      faceapi.loadFaceLandmarkModel(MODEL_URL),
-      faceapi.loadFaceRecognitionModel(MODEL_URL)
-//       faceapi.nets.tinyFaceDetector.loadFromDisk(MODEL_URL),
-//       faceapi.nets.faceLandmark68Net.loadFromDisk(MODEL_URL),
-//       faceapi.nets.faceRecognitionNet.loadFromDisk(MODEL_URL),
-//       faceapi.nets.faceExpressionNet.loadFromDisk(MODEL_URL),
-//       faceapi.nets.ageGenderNet.loadFromDisk(MODEL_URL)
+//       faceapi.loadSsdMobilenetv1Model(MODEL_URL),
+//       faceapi.loadFaceLandmarkModel(MODEL_URL),
+//       faceapi.loadFaceRecognitionModel(MODEL_URL)
+      faceapi.nets.tinyFaceDetector.loadFromDisk(MODEL_URL),
+      faceapi.nets.faceLandmark68Net.loadFromDisk(MODEL_URL),
+      faceapi.nets.faceRecognitionNet.loadFromDisk(MODEL_URL),
+      faceapi.nets.faceExpressionNet.loadFromDisk(MODEL_URL),
+      faceapi.nets.ageGenderNet.loadFromDisk(MODEL_URL)
   ]).then(function startvideo() {
       navigator.mediaDevices
         .getUserMedia(constraints)
